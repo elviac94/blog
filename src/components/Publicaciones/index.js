@@ -45,13 +45,22 @@ class Publicaciones extends Component {
         )
     };
 
+     ponerPublicaiones = () => {
+        const {
+            usuariosReducer,
+            usuariosReducer:{ usuarios },
+            publicacionesReducer,
+            publicacionesReducer: { publicaciones },
+            match: { params: { key } }
+        } = this.props
+    }
+
 
     render() {
         console.log(this.props);
         return (
             <div>
-
-                {this.props.match.params.key}
+                {this.ponerPublicaiones()}
                 {this.ponerUsuario()}
             </div>
         );
