@@ -1,7 +1,7 @@
 import { TRAER_POR_USUARIO, CARGANDO, ERROR } from '../types/publicacionesTypes';
 
 const INITIAL_STATE = {
-    publicaciones: [],
+    publicaciones: {},
     cargando: false,
     error: ''
 };

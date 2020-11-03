@@ -53,6 +53,15 @@ class Publicaciones extends Component {
             publicacionesReducer: { publicaciones },
             match: { params: { key } }
         } = this.props
+
+            console.log(publicaciones)
+            console.log(key);
+            if (key && publicaciones[key]) {
+                return <ul>{publicaciones[key].map(publicacion=><li>{publicacion.title}</li>)}</ul>
+            } else {
+                return '';
+            }
+         
     }
 
 
@@ -60,8 +69,8 @@ class Publicaciones extends Component {
         console.log(this.props);
         return (
             <div>
-                {this.ponerPublicaiones()}
                 {this.ponerUsuario()}
+                {this.ponerPublicaiones()}
             </div>
         );
     }
